@@ -1,0 +1,77 @@
+li {
+  background: #FAEBD7;
+  margin: 5px;
+  padding: 5px;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.create-update-form {
+  /*background: aqua;*/
+  margin: 5px;
+  padding: 5px;
+}
+
+.form-group {
+  margin-bottom: 5px;
+}
+
+
+.btn-custom {
+  background-color: hsl(36, 100%, 57%) !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fff0db", endColorstr="#fea723");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#fff0db), to(#fea723));
+  background-image: -moz-linear-gradient(top, #fff0db, #fea723);
+  background-image: -ms-linear-gradient(top, #fff0db, #fea723);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fff0db), color-stop(100%, #fea723));
+  background-image: -webkit-linear-gradient(top, #fff0db, #fea723);
+  background-image: -o-linear-gradient(top, #fff0db, #fea723);
+  background-image: linear-gradient(#fff0db, #fea723);
+  border-color: #fea723 #fea723 hsl(36, 100%, 48%);
+  color: #333 !important;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.59);
+  -webkit-font-smoothing: antialiased;
+}
+
+.col3 {
+	font-family: 'Kaushan Script', cursive;
+  height: auto;
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(rgba(122, 0, 255, 0.47), rgba(255, 255, 0, 0.51)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgba(122, 0, 255, 0.47), rgba(255, 255, 0, 0.51)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgba(122, 0, 255, 0.47), rgba(255, 255, 0, 0.51)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgba(122, 0, 255, 0.47), rgba(255, 255, 0, 0.51)); /* Standard syntax (must be last) */
+    text-align: center;
+    padding: 5px;
+  
+}
+
+.col1 {
+	padding: 5px;
+    height: auto;
+    text-align: center;
+    font-family: 'Kaushan Script', cursive;
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(rgba(255, 0, 118, 0.1), rgba(0, 255, 126, 0.5)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgba(255, 0, 118, 0.1), rgba(0, 255, 126, 0.5)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgba(255, 0, 118, 0.1), rgba(0, 255, 126, 0.5)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgba(255, 0, 118, 0.1), rgba(0, 255, 126, 0.5)); /* Standard syntax (must be last) */
+   
+
+}
+
+.col2 {
+	font-family: 'Kaushan Script', cursive;
+	text-align: center;
+	height: 100%;
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(rgba(0, 255, 31, 0.36), rgba(255, 0, 12, 0.29)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgba(0, 255, 31, 0.36), rgba(255, 0, 12, 0.29)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgba(0, 255, 31, 0.36), rgba(255, 0, 12, 0.29)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgba(0, 255, 31, 0.36), rgba(255, 0, 12, 0.29));
+    padding: 5px;
+   
+}
