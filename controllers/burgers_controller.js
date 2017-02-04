@@ -2,39 +2,53 @@
 var express = require("express");
 
 var router = express.Router();
+// var Burger = require("./Burger");
 
-// Import the model (burger.js) to use its database functions.
-var burger = require("../models/burger.js");
+// Requiring our models
+var db = require("../models");
 
-// Create all our routes and set up logic within those routes where required.
-router.get("/", function (req, res) {
-    burger.selectAll(function (data) {
-        var hbsObject = {
-            burger: data
-        };
-        console.log(hbsObject);
-        res.render("index", hbsObject);
-    });
-});
 
+// module.exports = function (app) {
+// POST route for saving a new burger
 router.post("/", function (req, res) {
-    burger.insertOne(
-        req.body.burger_name,
-        function () {
-            res.redirect("/");
-        });
-});
-
-router.put("/:id", function (req, res) {
-    var condition = req.params.id;
-    // var name = req.params.burger_name;
-
-    console.log("condition", condition);
-
-    burger.updateOne(condition, function () {
+    // console.log(req.body);
+    db.burger.create(req.body).then(function (dbRes) {
+        // res.json(dbRes);
         res.redirect("/");
     });
 });
+
+router.get("/", function (req, res) {
+
+    db.burger.findAll({}).then(function (dbresp) {
+        res.render("index", {
+            burgers: dbresp
+        });
+        // res.redirect("/");
+    });
+
+});
+// };
+
+// PUT route for updating posts
+router.put("/burgers/:burger_id", function (req, res) {
+    console.log("handler");
+    db.burger.findOne({
+        where: {
+            burger_id: req.params.burger_id
+        }
+    }).then(function (dbresp) {
+        console.log("query");
+        // res.json(dbresp);
+        dbresp.update({
+            devoured: true,
+        }).then(function () {
+            console.log("updated");
+            res.redirect('/');
+        });
+    });
+});
+
 
 // Export routes for server.js to use.
 module.exports = router;
