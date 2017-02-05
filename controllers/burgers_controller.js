@@ -17,7 +17,7 @@ router.post("/", function (req, res) {
         res.redirect("/");
     });
 });
-
+// route to display all the burgers
 router.get("/", function (req, res) {
 
     db.burger.findAll({}).then(function (dbresp) {
@@ -30,20 +30,20 @@ router.get("/", function (req, res) {
 });
 // };
 
-// PUT route for updating posts
+// PUT route for updating devoured burger
 router.put("/burgers/:burger_id", function (req, res) {
-    console.log("handler");
+    // console.log("handler");
     db.burger.findOne({
         where: {
             burger_id: req.params.burger_id
         }
     }).then(function (dbresp) {
-        console.log("query");
+        // console.log("query");
         // res.json(dbresp);
         dbresp.update({
             devoured: true,
         }).then(function () {
-            console.log("updated");
+            // console.log("updated");
             res.redirect('/');
         });
     });
